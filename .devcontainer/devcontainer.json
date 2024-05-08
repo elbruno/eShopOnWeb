@@ -3,14 +3,22 @@
 {
 	"name": "eShopOnWeb",
 	"image": "mcr.microsoft.com/devcontainers/dotnet:8.0",
- 
+	"features": {
+		"ghcr.io/devcontainers/features/dotnet:2": { "version": "8.0"},
+		"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+		"ghcr.io/devcontainers/features/azure-cli:1": {},
+		"ghcr.io/devcontainers/features/docker-from-docker:1.4.5": {},
+		"ghcr.io/devcontainers/features/github-cli:1": { "version": "2" }
+	  },
 	"customizations": {
 		 // Configure properties specific to VS Code.
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"ms-dotnettools.csharp",
-				"ms-dotnettools.csdevkit",
+                "ms-vscode.vscode-node-azure-pack",
+                "github.vscode-github-actions",
+                "ms-dotnettools.csdevkit",
+                "github.copilot",
 				"formulahendry.dotnet-test-explorer",
         			"ms-vscode.vscode-node-azure-pack",
         			"ms-kubernetes-tools.vscode-kubernetes-tools",
